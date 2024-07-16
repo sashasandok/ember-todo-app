@@ -1,0 +1,18 @@
+<section local-class="main">
+  <div local-class="toggle-all">
+    <input
+      id="mark-all-complete"
+      local-class="input"
+      type="checkbox"
+      checked={{this.todos.isAllCompleted}}
+      {{on "change" this.todos.toggleAllCompletion}}
+    />
+    <label for="mark-all-complete" local-class="label">Mark all as complete</label>
+  </div>
+
+  <ul local-class="todo-list">
+    {{#each @todos as |todo|}}
+      <Todo @todo={{todo}} />
+    {{/each}}
+  </ul>
+</section>

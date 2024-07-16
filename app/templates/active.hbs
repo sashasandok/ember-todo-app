@@ -1,0 +1,7 @@
+{{page-title "Active"}}
+
+{{#if @model.activeTodos}}
+  <TodoList @todos={{@model.activeTodos}} />
+{{else}}
+  <div class="no-data">No active todos</div>
+{{/if}}

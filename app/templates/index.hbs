@@ -1,0 +1,7 @@
+{{page-title "Index"}}
+
+{{#if @model.allTodos}}
+  <TodoList @todos={{@model.allTodos}} />
+{{else}}
+  <div class="no-data">No any todos</div>
+{{/if}}

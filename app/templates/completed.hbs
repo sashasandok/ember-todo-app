@@ -1,0 +1,7 @@
+{{page-title "Completed"}}
+
+{{#if @model.completedTodos}}
+  <TodoList @todos={{@model.completedTodos}} />
+{{else}}
+  <div class="no-data">No completed todos</div>
+{{/if}}

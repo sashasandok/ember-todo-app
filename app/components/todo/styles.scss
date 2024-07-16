@@ -1,0 +1,36 @@
+.todo {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+  padding: 5px 0;
+
+  .view {
+    display: flex;
+    align-items: center;
+    width: 85%;
+
+    .toggle {
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  .destroy {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: gray;
+    box-shadow: 3px 3px 10px rgb(162, 162, 162);
+    text-decoration: none;
+  }
+}
+
+.completed {
+  .view {
+    text-decoration: line-through;
+    color: gray;
+  }
+}

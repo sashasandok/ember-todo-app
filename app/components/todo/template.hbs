@@ -1,0 +1,19 @@
+<li local-class="todo {{if @todo.isCompleted 'completed'}}">
+  <div local-class="view">
+    <input
+      aria-label="Toggle the completion of this todo"
+      local-class="toggle"
+      type="checkbox"
+      checked={{@todo.isCompleted}}
+      {{on "change" (fn this.todos.toggleCompletion @todo)}}
+    />
+    <label>{{@todo.text}}</label>
+
+  </div>
+  <button
+    type="button"
+    local-class="destroy"
+    title="Remove this todo"
+    {{on "click" (fn this.todos.removeTodo @todo)}}
+  >x</button>
+</li>
